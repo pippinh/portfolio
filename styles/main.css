@@ -90,7 +90,7 @@ nav ul li a {
 /*END of burger*/
 
 .banner {
-    background: url(images/banner.jpg) no-repeat center center; 
+    background: url(../images/banner.jpg) no-repeat center center; 
     background-size: cover; 
     width: 100%;
     height: auto;
