@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="resultstyle.css">
+</head>
+<body>
+    <div class="results-container">
+        <h1>Thanks For Signing Up!</h1>
+        <div id="result-message"></div>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                name: params.get('name'),
+                email: params.get('email')
+            };
+        }
+
+        const { name, email } = getQueryParams();
+        const resultMessage = document.getElementById('result-message');
+        if (name && email) {
+            resultMessage.textContent = `Thank you, ${name}! Your email (${email}) has been submitted.`;
+        } else {
+            resultMessage.textContent = "No data submitted.";
+        }
+    </script>
+</body>
+</html>
